@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="829.0" prefWidth="1389.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itpm_projectnb.Home.WorksheduleController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="1357.0" style="-fx-background-color: #4c575c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="36.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WORK SHEDULES" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="19.546875">
+               <font>
+                  <Font name="Arial Narrow Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Label layoutX="30.0" layoutY="96.0" text="Number of Working Days">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="165.0" text="Working Days">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="348.0" text="Time Duration">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="419.0" text="Time Slot Increment Every">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="486.0" text="Break After">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="266.0" layoutY="96.0" prefHeight="436.0" prefWidth="347.0" spacing="40.0">
+         <children>
+             <HBox spacing="6.0">
+            <Spinner fx:id="myspinner" editable="true" />
+             </HBox>
+            <VBox fx:id="vbday" spacing="8.0">
+               <children>
+                  <CheckBox fx:id="chek1" mnemonicParsing="false" text="Monday" />
+                  <CheckBox fx:id="chek2" mnemonicParsing="false" text="Tuesday" />
+                  <CheckBox fx:id="chek3" mnemonicParsing="false" text="Wednesday" />
+                  <CheckBox fx:id="chek4" mnemonicParsing="false" text="Thursday" />
+                  <CheckBox fx:id="chek5" mnemonicParsing="false" text="Friday" />
+               </children>
+            </VBox>
+            <HBox spacing="6.0">
+               <children>
+                  <JFXTimePicker fx:id="startT" defaultColor="#676b6a" prefHeight="29.0" prefWidth="109.0" />
+                  <Label text=" AM to" />
+                  <JFXTimePicker fx:id="endT" defaultColor="#676b6a" prefHeight="31.0" prefWidth="114.0" />
+                  <Label text="PM" />
+               </children>
+            </HBox>
+            <HBox spacing="6.0">
+               <children>
+                  <Spinner fx:id="spin4" editable="true" prefHeight="19.0" prefWidth="130.0" />
+                  <Label text="Minutes" />
+               </children>
+            </HBox>
+            <HBox spacing="6.0">
+               <children>
+                  <Spinner fx:id="spin5" editable="true" />
+                  <Label text="Periods" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="tvworkdays" layoutX="623.0" layoutY="93.0" onMouseClicked="#getSelected" prefHeight="419.0" prefWidth="692.0">
+        <columns>
+          <TableColumn fx:id="colcountdays" prefWidth="78.0" text="Count days" />
+            <TableColumn fx:id="colst" prefWidth="95.0" text="Start Time" />
+            <TableColumn fx:id="colet" prefWidth="114.0" text="End Time" />
+            <TableColumn fx:id="colwday" minWidth="0.0" prefWidth="130.0" text="Working Days" />
+            <TableColumn fx:id="colslot" prefWidth="146.0" text="Time Slot Increment by" />
+            <TableColumn fx:id="colbreak" prefWidth="130.0" text="Break Given per" />
+            <TableColumn fx:id="colid" prefWidth="345.0" text="ID" visible="false" />
+        </columns>
+      </TableView>
+      <HBox layoutX="670.0" layoutY="552.0" prefHeight="60.0" prefWidth="598.0" spacing="30.0">
+         <children>
+            <Button fx:id="btngenerate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="204.0" style="-fx-background-color: #b4e0c1;" text="GENERATE TIME SLOT">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@j_images/iconfinder_add_35638.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnview" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="53.0" prefWidth="100.0" style="-fx-background-color: #f3f77e;" text="VIEW">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@j_images/iconfinder_Button%20Load_58483.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnupdate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="108.0" style="-fx-background-color: #a6d9ed;" text="UPDATE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@j_images/iconfinder_update_64935.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btndelete" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="47.0" prefWidth="100.0" style="-fx-background-color: #f7b2ab;" text="DELETE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@j_images/iconfinder_Delete_37084.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+         <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="label1" layoutX="25.0" layoutY="612.0" prefHeight="60.0" prefWidth="1340.0" />
+   </children>
+</AnchorPane>

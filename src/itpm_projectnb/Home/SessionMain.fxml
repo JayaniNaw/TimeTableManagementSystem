@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf7f6; -fx-border-color: #7652cc;" styleClass="buttons" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itpm_projectnb.Home.SessionMainController">
+   <children>
+      <Pane layoutX="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="1282.0" style="-fx-background-color: #034efc;" AnchorPane.bottomAnchor="643.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="584.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1210.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="32.0" style="-fx-background-color: #034efc;">
+               <graphic>
+                  <FontAwesomeIconView id="user" glyphName="USER" size="50" text="" wrappingWidth="16.28571319580078">
+                     
+                  </FontAwesomeIconView>
+               </graphic>
+               
+            </Button>
+            <ImageView fitHeight="71.0" fitWidth="59.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Line endX="974.0" layoutX="314.0" layoutY="137.0" opacity="0.3" startX="-306.0" stroke="#9832ba" />
+      <Pane layoutX="2.0" layoutY="683.0" prefHeight="40.0" prefWidth="1291.0" style="-fx-background-color: #034efc;" />
+      <AnchorPane layoutX="89.0" layoutY="163.0" prefHeight="486.0" prefWidth="1117.0" style="-fx-background-color: #000033;">
+         <children>
+            <ImageView fitHeight="374.0" fitWidth="389.0" layoutX="115.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@uni.jpg" />
+               </image>
+            </ImageView>
+             
+             
+             
+             <Button fx:id="btnMainNotOverlapping" layoutX="668.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="342.0" style="-fx-background-color: #00cccc;" text="Add Not Overlapping Session Rooms">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font></Button>
+            <Button fx:id="btnMainParallel" layoutX="661.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="349.0" style="-fx-background-color: #00cccc;" text="Add Parallel Session Rooms">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMainAddSession" layoutX="597.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="326.0" style="-fx-background-color: #00cccc;" text="Add Session Rooms">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMainConsecutive" layoutX="597.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="326.0" style="-fx-background-color: #00cccc;" text="Add Consecutive Session Rooms">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMainManageSession" layoutX="597.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="326.0" style="-fx-background-color: #00cccc;" text="Manage Session Rooms">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnManageLocation" layoutX="660.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="358.0" style="-fx-background-color: #00cccc;" text="Manage Location">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="352.0" layoutY="97.0" prefHeight="40.0" prefWidth="451.0" text="                     Session Rooms">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

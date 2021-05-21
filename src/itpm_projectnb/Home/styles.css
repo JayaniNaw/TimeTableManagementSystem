@@ -1,0 +1,184 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 16, 2021, 6:06:27 AM
+    Author     : Adeesha
+*/
+
+.button {
+        -fx-background-color: #ebebf0;
+}
+
+
+.button:hover {
+    
+    -fx-text-fill: #242d35;
+    -fx-text-fill: white;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+      -fx-background-color:
+            #a6b5c9,
+            linear-gradient(#303842 0%, #3e5577 20%, #375074 100%),
+            linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+         -fx-font-size: 18px;
+
+}
+
+.glyph-icon {
+    -fx-fill: #5c8dff;    
+}
+
+.button:hover .glyph-icon{
+    -fx-fill: white;
+    -glyph-size: 65px;
+}
+
+
+.homeButtons{
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#9a9a9a, #909090),
+            linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    
+}
+
+
+#user{
+    -fx-fill: #070338;
+}
+
+.button:hover #user{
+        -fx-fill: white;
+        -glyph-size: 50px;
+
+}
+
+
+#switchScene:hover {
+        -fx-fill: #070338;
+        -glyph-size: 60px;
+
+}
+
+ #exitScene:hover {
+        -fx-fill: #070338;
+        -glyph-size: 60px;
+}
+
+.updateBtn
+{
+    -fx-background-color:
+           #006fde,
+            linear-gradient(#fafdfe, #e8f5fc),
+            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-radius: 6,5;
+    -fx-background-insets: 0,1;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+   -fx-text-fill: #395306;
+}
+
+.button:hover .updateBtn{
+    
+    -fx-background-color: #01003b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.deleteBtn
+{
+         -fx-background-color:
+           #f25757,
+            linear-gradient(#fafdfe, #e8f5fc),
+            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-radius: 6,5;
+    -fx-background-insets: 0,1;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+   -fx-text-fill: #395306;
+
+}
+
+.button:hover .deleteBtn{
+    
+    -fx-background-color: #01003b;
+    -fx-text-fill: white;
+   
+}
+
+.saveBtn{
+   
+    -fx-background-color:
+           #00d640,
+            linear-gradient(#fafdfe, #e8f5fc),
+            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-radius: 6,5;
+    -fx-background-insets: 0,1;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+   -fx-text-fill: #395306;
+}
+
+
+.clearBtn{
+   
+     -fx-background-color:
+          #f7b500,
+            linear-gradient(#fafdfe, #e8f5fc),
+            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-radius: 6,5;
+    -fx-background-insets: 0,1;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+   -fx-text-fill: #395306;
+}
+
+.generateBtn{
+     -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #2f4b8f),
+            linear-gradient(#426ab7, #263e75),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+}
+
+
+
+
+
+.comboBox{
+    -fx-font-family: "Helvetica";
+     -fx-font-size: 17px;
+     
+}
+
+#disabledCombo
+{ 
+ -fx-background-color:
+            #707070,
+            linear-gradient(#fcfcfc, #f3f3f3),
+            linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+         -fx-font-size: 15px;
+        -fx-font-weight: bold;
+
+    
+}
+
+.table{
+   -fx-font-family: "Helvetica";
+     -fx-font-size: 17px;  
+     
+}
+

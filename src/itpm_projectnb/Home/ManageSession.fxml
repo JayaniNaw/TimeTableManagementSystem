@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf7f6; -fx-border-color: #7652cc;" styleClass="buttons" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itpm_projectnb.Home.ManageSessionController">
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="1282.0" style="-fx-background-color: #034efc;" AnchorPane.bottomAnchor="641.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="584.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1210.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="46.0" style="-fx-background-color: #034efc;">
+               <graphic>
+                  <FontAwesomeIconView id="user" glyphName="USER" size="50" text="">
+                     
+                  </FontAwesomeIconView>
+               </graphic>
+               
+                  </Button>
+            <ImageView fitHeight="71.0" fitWidth="59.0" layoutX="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Line endX="974.0" layoutX="314.0" layoutY="137.0" opacity="0.3" startX="-306.0" stroke="#9832ba" />
+      <Pane layoutX="2.0" layoutY="683.0" prefHeight="40.0" prefWidth="1291.0" style="-fx-background-color: #034efc;" />
+      <AnchorPane layoutX="69.0" layoutY="130.0" prefHeight="543.0" prefWidth="1103.0" style="-fx-background-color: #000033;">
+         <children>
+            <Button fx:id="btnAddRoom" layoutX="428.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="121.0" style="-fx-background-color: #00b3b3;" text="Add Room" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnRefresh" layoutX="638.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #00b3b3;" text="Refresh">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <TableView fx:id="tv" layoutX="32.0" layoutY="103.0" prefHeight="345.0" prefWidth="980.0">
+              <columns>
+                <TableColumn fx:id="colLecture1" prefWidth="127.0" text="Lecturer1" />
+                <TableColumn fx:id="colLecture2" prefWidth="113.0" text="Lecturer2" />
+                  <TableColumn fx:id="colSubjectName" prefWidth="113.0" text="Subject Name" />
+                  <TableColumn fx:id="colGroupID" prefWidth="127.0" text="Group ID" />
+                  <TableColumn fx:id="colTag" prefWidth="127.0" text="Tag" />
+                  <TableColumn fx:id="colNoOfStudents" prefWidth="113.0" text="No Of Students" />
+                  <TableColumn fx:id="colDurations" prefWidth="113.0" text="Duration" />
+                  <TableColumn fx:id="colRoom" prefWidth="127.0" text="Room" />
+              </columns>
+            </TableView>
+            <Label layoutX="401.0" layoutY="43.0" prefHeight="64.0" prefWidth="471.0" text="Manage Session Room" textFill="#e2ff05">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSession" layoutX="75.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="267.0" style="-fx-background-color: #25383C;" text="Session" textAlignment="CENTER" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsecutiveSession" layoutX="342.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #25383C; -fx-background-color: ;" text="Consecutive Session" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNonOverlappingSession" layoutX="792.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #25383C;" text="Non Overlapping Session" textAlignment="CENTER" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnParallelSession" layoutX="549.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #25383C; -fx-background-color: ;" text="Parallel Session" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tv11" disable="true" layoutX="541.0" layoutY="378.0" prefHeight="58.0" prefWidth="471.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="colSessionIDNew" prefWidth="127.0" text="Session ID" />
+                  <TableColumn fx:id="colRoomNew" prefWidth="113.0" text="Room" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

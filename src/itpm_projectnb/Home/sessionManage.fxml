@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itpm_projectnb.Home.SessionManageController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf7f6; -fx-border-color: #7652cc;" styleClass="buttons" stylesheets="@style.css">
+         <children>
+            <Pane layoutX="-10.0" layoutY="-10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="86.0" prefWidth="1349.0" style="-fx-background-color: #034efc;" AnchorPane.bottomAnchor="650.0" AnchorPane.leftAnchor="-11.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="-11.0">
+               <children>
+                  <Text layoutX="584.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1210.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="46.0" style="-fx-background-color: #034efc;">
+                     <graphic>
+                        <FontAwesomeIconView id="user" glyphName="USER" size="50" text="">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIconView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="71.0" fitWidth="59.0" layoutX="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Line endX="974.0" layoutX="314.0" layoutY="137.0" opacity="0.3" startX="-306.0" stroke="#9832ba" />
+            <Pane layoutX="-8.0" layoutY="683.0" prefHeight="40.0" prefWidth="1341.0" style="-fx-background-color: #034efc;" />
+            <AnchorPane layoutX="24.0" layoutY="62.0" prefHeight="602.0" prefWidth="1294.0">
+               <children>
+                  <AnchorPane layoutX="-31.0" layoutY="13.0" prefHeight="599.0" prefWidth="1326.0" />
+                  <AnchorPane layoutX="-32.0" layoutY="12.0" prefHeight="606.0" prefWidth="1342.0" style="-fx-background-color: ADD8E6;">
+                     <children>
+                        <Label layoutX="490.0" layoutY="9.0" prefHeight="70.0" prefWidth="434.0" text="Manage Sessions">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tv" layoutX="14.0" layoutY="78.0" onMouseClicked="#retrieve" prefHeight="132.0" prefWidth="1320.0">
+                           <columns>
+                              <TableColumn fx:id="colID" prefWidth="55.0" text="ID" />
+                              <TableColumn fx:id="colLecturer1" text="Lecturer1" />
+                              <TableColumn fx:id="colLecturer2" prefWidth="96.0" text="Lecturer2" />
+                              <TableColumn fx:id="colAdditional1" prefWidth="159.0" text="AdditionalLecturer1" />
+                              <TableColumn fx:id="colAdditional2" prefWidth="121.0" text="AdditionalLecturer2" />
+                              <TableColumn fx:id="colTag" prefWidth="72.0" text="Tag" />
+                              <TableColumn fx:id="colGroupID" prefWidth="68.0" text="GroupID" />
+                              <TableColumn fx:id="colSubGroup" prefWidth="96.0" text="SubGroupID" />
+                              <TableColumn fx:id="colCode" prefWidth="94.0" text="SubjectCode" />
+                              <TableColumn fx:id="colSubject" prefWidth="56.0" text="Subject" />
+                              <TableColumn fx:id="colNumber" minWidth="0.0" prefWidth="81.0" text="NoOfStudents" />
+                              <TableColumn fx:id="colDuration" minWidth="0.0" prefWidth="61.0" text="Duration" />
+                              <TableColumn fx:id="colSessionID" prefWidth="278.0" text="sessionID" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="98.0" layoutY="229.0" prefHeight="35.0" prefWidth="1148.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnGenerate" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="220.0" style="-fx-background-color: #034efc;" text="Generate Session ID" textFill="#f8f7f7">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnAdd" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="220.0" style="-fx-background-color: #034efc;" text="Add" textFill="#f8f7f7">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnUpdate" layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="220.0" style="-fx-background-color: #034efc;" text="Update" textFill="#f8f7f7">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnDelete" layoutX="490.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="220.0" style="-fx-background-color: #034efc;" text="Delete" textFill="#f8f7f7">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnClear" layoutX="730.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="220.0" style="-fx-background-color: #034efc;" text="Clear" textFill="#f8f7f7">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <AnchorPane layoutX="92.0" layoutY="285.0" prefHeight="318.0" prefWidth="1156.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <VBox layoutX="727.0" layoutY="20.0" prefHeight="35.0" prefWidth="408.0" spacing="30.0">
+                                 <children>
+                                    <ComboBox fx:id="ddLecturers1" onAction="#retrieveLecturer2" prefHeight="43.0" prefWidth="468.0" />
+                                    <ComboBox fx:id="ddAdditional1" onAction="#retrieveAdditionalLecturer2" prefHeight="43.0" prefWidth="428.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="849.0" layoutY="121.0" prefHeight="155.0" prefWidth="284.0" spacing="15.0">
+                                 <children>
+                                    <TextField fx:id="txtSubject" onAction="#retrieveSubject" onMouseClicked="#retrieveSubject" prefHeight="47.0" prefWidth="224.0" />
+                                    <TextField fx:id="txtNumber" prefHeight="49.0" prefWidth="262.0" />
+                                    <TextField fx:id="txtDuration" prefHeight="47.0" prefWidth="262.0" />
+                                    <TextField fx:id="txtSessionID" prefHeight="51.0" prefWidth="262.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="723.0" layoutY="123.0" prefHeight="196.0" prefWidth="124.0" spacing="15.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="388.0" text="Select Subject">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="388.0" text="No.Students">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="84.0" prefHeight="49.0" prefWidth="388.0" text="Duration">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="99.0" prefHeight="49.0" prefWidth="388.0" text="Session ID">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="169.0" prefHeight="49.0" prefWidth="388.0" text="ID">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="234.0" layoutY="14.0" prefHeight="303.0" prefWidth="386.0" spacing="30.0">
+                                 <children>
+                                    <ComboBox fx:id="ddLecturers" onAction="#retrieveLecturer1" prefHeight="34.0" prefWidth="394.0" />
+                                    <ComboBox fx:id="ddAdditional" onAction="#retrieveAdditionalLecturer1" prefHeight="43.0" prefWidth="422.0" />
+                                    <ComboBox fx:id="ddTags" onAction="#retrieveTags" prefHeight="43.0" prefWidth="430.0" />
+                                    <ComboBox fx:id="ddGroup" onAction="#retrieveGroups" prefHeight="41.0" prefWidth="428.0" />
+                                    <ComboBox fx:id="ddSubGroup" onAction="#retrieveSubGroups" prefHeight="42.0" prefWidth="382.0" />
+                                    <ComboBox fx:id="ddCode" layoutX="10.0" layoutY="300.0" onAction="#retrieveSubjectCode" prefHeight="47.0" prefWidth="382.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="34.0" layoutY="3.0" prefHeight="317.0" prefWidth="180.0" spacing="15.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="352.0" text="Select Lecturer(s)">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="352.0" text="Additonal Lecturer(s)">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="59.0" prefHeight="49.0" prefWidth="352.0" text="Select Tag">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="108.0" prefHeight="49.0" prefWidth="352.0" text="Select Group">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="157.0" prefHeight="49.0" prefWidth="352.0" text="Select Sub Group ID">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="206.0" prefHeight="49.0" prefWidth="352.0" text="Select Subject Code">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="txtID" layoutX="851.0" layoutY="286.0" prefHeight="29.0" prefWidth="280.0" />
+                           </children>
+                        </AnchorPane>
+                        <HBox layoutX="898.0" layoutY="17.0" prefHeight="40.0" prefWidth="428.0" spacing="15.0">
+                           <children>
+                              <ComboBox fx:id="ddSearch1" onAction="#retrieveDetails" prefHeight="51.0" prefWidth="194.0" />
+                              <ComboBox fx:id="ddSearch" onAction="#showSessionsGivenID" prefHeight="51.0" prefWidth="227.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
